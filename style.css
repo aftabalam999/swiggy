@@ -1,0 +1,593 @@
+:root{
+    --primary-color : #FF5301
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    box-shadow: 0px 5px 10px #ccc;
+    display: none;
+}
+
+header .tag-name{
+    width: 30%;
+    object-fit: contain;
+}
+
+header .tag-name img{
+    width: 100%;
+}
+
+header i{
+    font-size: 1.2rem;
+}
+
+nav{
+    width: 100%;
+    padding: 0.7rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 10px 10px #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo img{
+    width: 3.6rem;
+}
+
+#otherOption{
+    font-weight: 600;
+    padding: 0.8rem 3rem;
+}
+
+#otherOption span{
+    border-bottom: 2px solid #000;
+}
+
+#otherOption i{
+    color: var(--primary-color);
+}
+
+#otherOption span:hover{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    cursor: pointer;
+}
+
+nav ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: 550;
+    color: #000;
+}
+
+nav ul li a svg{
+    margin-right: 0.3rem;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a:hover svg{
+    fill: var(--primary-color) !important;
+    color: var(--primary-color);
+}
+
+
+/* Main Container */
+.main-container{
+    width: 100%;
+    padding: 0rem 12rem;
+    margin-top: 7.5rem;
+}
+
+/* hero section */
+.hero{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-tag, .top-restaurent-tag{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-tag p{
+    font-size: 1.2rem;
+    font-weight: 630;
+}
+
+.hero-icon{
+    display: flex;
+}
+
+.left-arrow, .right-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    background-color: #ccc;
+}
+
+.left-arrow, .right-arrow:hover{
+    cursor: pointer;
+}
+
+.left-arrow{
+    color: #666;
+    background-color: #e5e2e2b7;
+    margin-right: 0.5rem;
+}
+
+.hero-content{
+    width: 100%;
+    /* height: 15rem; */
+    padding: 2rem 0rem;
+    display: flex;
+    overflow-y: hidden; 
+    overflow-x: scroll;
+    border-bottom: 2px solid #dad7d7da;
+    margin-bottom: 2rem;
+}
+
+.hero-content::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-img-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 11rem;
+    margin: 0.5rem;
+}
+
+.hero-img-card:hover{
+    cursor: pointer;
+}
+
+.hero-img-card img{
+    width: 9rem;
+    height: 10rem;
+}
+
+/* Top Restaurent Section */
+
+
+.top-restaurent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-restaurent-tag p{
+    font-size: 1.2rem;
+    font-weight: 630;
+}
+
+.top-rest-card{
+    min-width: 17rem;
+    height: 22rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 1rem;
+}
+
+.top-rest-card:hover{
+    transform: scale(0.95);
+}
+
+.top-rest-card img{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem
+}
+
+.top-rest-card-content{
+    padding: 0rem 1rem;
+}
+
+.top-rest-star{
+    display: flex;
+}
+
+.top-rest-card i, .fa-star{
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: #fff;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.top-rest-card-content p{
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+
+/* Food delivary Restaurent */
+.filter-navbar{
+    width: 100%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 1rem;
+}
+
+.filter-navbar button{
+    padding: 0.6rem 1rem;
+    border-radius: 3rem;
+    font-size: 1rem;
+    color: #000;
+    border: 1px solid #666;
+    margin: 1rem 0rem;
+}
+
+.filter-navbar button:hover{
+    cursor: pointer;
+}
+
+.restaurent-items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;    
+}
+.restaurent-items-card{
+    min-width: 22%;
+    max-width: 23%;
+    overflow: hidden;
+    height: 22rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 1rem;
+}
+
+.restaurent-items-card img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* Best Restaurent */
+.best-place{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 3rem;
+    margin-bottom: 5rem;
+}
+
+.best-place-tag{
+    margin-bottom: 1rem;
+}
+
+.best-place-name-con{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.place-name-card{
+    width: 23%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.place-name-card:hover{
+    cursor: pointer;
+}
+
+.place-name-card p{
+    font-size: 0.95rem;
+    color: #545353;
+    font-weight: 600;
+}
+
+.show-more p{
+    color: var(--primary-color);
+}
+
+/* Explore Restaurent */
+.explore-restaurent{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Footer section */
+footer{
+    width: 100%;
+    padding: 3rem 15rem;
+    background-color: #F0F0F5;
+}
+
+.footer-tag-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-tag-con p{
+    color: #3D4046;
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+.footer-tag-icon{
+    width: 40%;
+    display: flex;
+}
+
+.footer-tag-icon img{
+    width: 50%;
+}
+
+.footer-main-con{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiggy-full-logo{
+    width: 20%;
+}
+
+.swiggy-full-logo img{
+    width: 85%;
+}
+
+.swiggy-full-logo p{
+    margin-top: 0.5rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.swiggy-terms-con{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.company h3, .contact h3, .legal h3, .available-in h3, .life-at-swiggy h3, .social-icons h3 {
+    font-weight: 550;
+    margin-bottom: 1.3rem;
+}
+
+.company p, .contact p, .legal p, .available-in p, .life-at-swiggy p{
+    font-size: 0.9rem;
+    font-weight: 460;
+    color: #666;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+}
+
+.contact-legal-con{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact{
+    margin-bottom: 8rem;
+}
+
+.available-in button{
+    padding: 0.4rem;
+    border: 1px solid #c1c0c0;
+    background-color: #F0F0F5;
+    border-radius: 0.7rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+}
+
+.available-in button i{
+    margin-left: 1rem;
+}
+
+.life-at-swiggy{
+    margin-bottom: 9rem;
+}
+
+.social-icons i{
+    margin-right: 0.6rem;
+    font-size: 1.1rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.author{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+
+/* Responsive Code Start */
+@media  screen and (max-width: 1024px) {
+    
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        display: flex;
+    }
+
+    header i{
+        font-size: 1.6rem;
+    }
+
+    nav{
+        display: none;
+    }
+
+    nav .logo{
+        display: none;
+    }
+
+    nav ul{
+        display: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container{
+        max-width: 100%;
+        padding: 0rem 1rem;
+        margin-top: 2rem;
+    }
+
+    /* hero */
+    .filter-navbar button{
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .restaurent-items-card{
+        max-width: 100%;
+        min-width: 100%;
+        height: 26rem;
+        margin: 0rem;
+    }
+
+    .restaurent-items-card img{
+        height: 60%;
+    }
+
+    .place-name-card{
+        width: 47%;
+    }
+
+    .filter-navbar{
+        display: none;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .footer-tag-con{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-tag-icon{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .footer-main-con{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .swiggy-full-logo{
+        width: 100%;
+        padding: 0.3rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .swiggy-full-logo img{
+        width: 70%;
+    }
+
+    .swiggy-terms-con{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .company{
+        width: 50%;
+    }
+
+    .company h3, .contact h3, .legal h3, .available-in h3, .life-at-swiggy h3, .social-icons h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .company p, .contact p, .legal p, .available-in p, .life-at-swiggy p{
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .contact{
+        margin-bottom: 1rem;
+    }
+
+    .life-at-swiggy{
+        margin: 1rem;
+    }
+
+    .social-icons i{
+        font-size: 1.3rem;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .place-name-card{
+        width: 100%;
+    }
+}
